@@ -10,7 +10,7 @@ Il gioco della tombola necessita di un **tabellone** grande su cui sono riportat
 Durante il gioco si decide un croupier ovvero colui che avrà il compito di mischiare ed estrarre i numeri dal bussolotto (o dal sacchetto) e barrare la casella del corrispettivo numero sul tabellone grande. I giocatori invece, dopo aver acquistato le cartelle (l'acquisto può essere simbolico o pagato in denaro) le dispongono davanti a sè e oscurano il numero che il croupier estrae con l'apposita casellina. Quando tutte le caselline con i numeri (sempre diversi per ogni cartella) vengono oscurate il giocatore ha fatto "tombola" e acquista il premio finale. Oltre alla tombola è possibile anche decidere dei premi minori che si acquisiscono facendo **ambo** (due numeri sulla stessa riga) **terno** (tre numeri sulla stessa riga) **quaterna** (quattro numeri sulla stessa riga) e **cinquina** (cinque numeri sulla stessa riga).
 
   ---
-  ![Le Cartelle](https://www.villasantangela.it/wp-content/uploads/2020/05/tombola.jpg)
+  ![Le Cartelle](https://www.compratombolaonline.it/wp-content/uploads/2018/10/T1_15_A_WHITE-1.png)
 ---  
   # L'Informatica
 Diviso in Tre Files: 
