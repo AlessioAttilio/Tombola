@@ -105,7 +105,7 @@ void IstruzioniGioco() {
     cout << "I Numeri Verranno Estratti Dal Bussolotto E Nessuno Dei Partecipanti, Nemmeno Chi Toccherà Estrarre Numeri, Saprà Il Numero Prima Che Uscisse Dal Bussolotto. " << endl;
     cout << "I Giocatori, Dopo Aver Acquistato Le Cartelle, Le Dispongono Davanti A Sé E Oscurano Il Numero Che Verrà Estratto Dal Bussolotto Con L'apposita Casellina. " << endl;
     cout << "Quando Tutte Le Caselline Con I Numeri Vengono Oscurate Il Giocatore Ha Fatto \"Tombola\" E Acquista Il Premio Finale." << endl;
-    cout << " Oltre Alla Tombola È Possibile Anche Decidere Dei Premi Minori Che Si Acquisiscono Facendo ControlloAmbo (Due Numeri Sulla Stessa Riga) "
+    cout << " Oltre Alla Tombola È Possibile Anche Decidere Dei Premi Minori Che Si Acquisiscono Facendo Ambo (Due Numeri Sulla Stessa Riga) "
             "Terno (Tre Numeri Sulla Stessa Riga) Quaterna (Quattro Numeri Sulla Stessa Riga) E Cinquina (Cinque Numeri Sulla Stessa Riga)." << endl;
     cout << "╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝" << endl ;
 }
