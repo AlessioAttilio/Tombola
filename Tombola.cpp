@@ -4,56 +4,49 @@ namespace Variabili {
     char SceltaProgramma;
     unsigned int NumeriTabella = 1;
     const unsigned int PrezzoCartella = 10, CartelleRichieste = 1;
-    int Soldi = 0, CostoCartelle = 0, Controllo = 0, NumeriEstratti = 0;
+    double Soldi = 0, CostoCartelle = 0, Controllo = 0, NumeriEstratti = 0;
     bool ControlloAmbo = false, ControlloTerno = false, ControlloQuaterna = false, ControlloQuintina = false, ControlloTombola = false, Pagato = false;
 
     string Simbologia[90] = {
             "L'ITALIA", "LA GATTA", "LA BAMBINA", "IL MAIALE", "LA MANO", "IL PULPITO FEMMINILE", "IL VASO",
-            "LA MADONNA", "LA FIGLIATA", "I FAGIOLI", "I RATTI", "I SOLDATI ", "SANT'ANTONIO", "L'UBRIACO",
-            "IL RAGAZZO", "LA FORTUNA",
-            "LA DISGRAZIA", "IL SANGUE", "LA RISATA", "LA FESTA", "LA DONNA NUDA",
+            "LA MADONNA", "LA FIGLIATA", "I FAGIOLI", "I RATTI", "I SOLDATI ", "SANT'ANTONIO","L'UBRIACO","IL RAGAZZO","LA FORTUNA",
+            "LA DISGRAZIA","IL SANGUE", "LA RISATA", "LA FESTA", "LA DONNA NUDA",
             "IL PAZZO", "LO SCEMO", "LE GUARDIE", "NATALE", "ANNA - MADRE DELLA VERGINE", "IL VASO DA NOTTE", "IL SENO",
-            "IL PADRE DEI BAMBINI", "LE PALLE DEL TENENTE", "IL PADRONE DI CASA",
-            "IL CAPITONE", "GLI ANNI DI CRISTO", "LA TESTA", "L'UCCELLINO", "LE CASTAGNETTE", "IL MONACO", "LE MAZZATE",
-            "LA CORDA AL COLLO",
+            "IL PADRE DEI BAMBINI", "LE PALLE DEL TENENTE","IL PADRONE DI CASA",
+            "IL CAPITONE", "GLI ANNI DI CRISTO", "LA TESTA", "L'UCCELLINO", "LE CASTAGNETTE", "IL MONACO", "LE MAZZATE", "LA CORDA AL COLLO",
             "L'ERNIA", "IL COLTELLO", "IL CAFFE' ",
-            "LA DONNA PETTEGOLA AFFACCIATA AL BALCONE", "LE CARCERI", "IL VINO BUONO", "IL DENARO", "IL MORTO",
-            "IL MORTO CHE PARLA", "IL PEZZO DI CARNE",
+            "LA DONNA PETTEGOLA AFFACCIATA AL BALCONE", "LE CARCERI", "IL VINO BUONO", "IL DENARO", "IL MORTO", "IL MORTO CHE PARLA", "IL PEZZO DI CARNE",
             "IL PANE", "IL GIARDINO",
-            "LA MAMMA", "IL VECCHIO", "IL CAPPELLO", "LA MUSICA", "LA CADUTA", "IL GOBBO", "IL PACCO", "I PELI",
-            "IL LAMENTO", "IL CACCIATORE",
+            "LA MAMMA", "IL VECCHIO"  , "IL CAPPELLO", "LA MUSICA", "LA CADUTA","IL GOBBO", "IL PACCO", "I PELI", "IL LAMENTO", "IL CACCIATORE",
             "IL MORTO ASSASSINATO", "LA SPOSA", "LA GIACCA", "IL PIANTO", "LE DUE ZITELLE", "IL TOTANO NELLA CHITERRA",
-            "LA ZUPPA COTTA", "IL SOTTOSOPRA", "IL PALAZZO", "L'UOMO DI MERDA", "LA MERAVIGLIA", "L'OSPEDALE",
-            "LA GROTTA",
-            "PULCINELLA", "LA FONTANA", "I DIAVOLETTI", "LA PROSTITUTA", "IL LADRO", "LA BOCCA", "I FIORI",
-            "LA TAVOLA IMBANDITA",
-            "IL MALTEMPO", "LA CHIESA", "LE ANIME DEL PURGATORIO", "LA BOTTEGA", "I PIDOCCHI", "I CACIOCAVALLI",
-            "LA VECCHIA", "LA PAURA"
+            "LA ZUPPA COTTA", "IL SOTTOSOPRA", "IL PALAZZO", "L'UOMO DI MERDA", "LA MERAVIGLIA", "L'OSPEDALE", "LA GROTTA",
+            "PULCINELLA", "LA FONTANA", "I DIAVOLETTI", "LA PROSTITUTA","IL LADRO", "LA BOCCA", "I FIORI", "LA TAVOLA IMBANDITA",
+            "IL MALTEMPO", "LA CHIESA", "LE ANIME DEL PURGATORIO","LA BOTTEGA", "I PIDOCCHI", "I CACIOCAVALLI", "LA VECCHIA", "LA PAURA"
     };
-
-
-    struct Cartella {
-        unsigned int Numeri{};
-        bool Marcato = false;
-    };
-
-    const unsigned int Righe = 9, Colonne = 10;
-
-    const unsigned int RigheSingolaCartella = 3, ColonneSingolaCartella = 5;
-    Cartella CartellaSingola[ColonneSingolaCartella][RigheSingolaCartella];
-
-    const unsigned int RigheDoppiaCartella = 6, ColonneDoppiaCartella = 10;
-    Cartella CartellaDoppia[ColonneDoppiaCartella][RigheDoppiaCartella];
-
-    const unsigned int RigheTriplaCartella = 9, ColonneTriplaCartella = 15;
-    Cartella CartellaTripla[ColonneTriplaCartella][RigheTriplaCartella];
-
-    int Numeri[ColonneSingolaCartella * RigheSingolaCartella];
-    bool NumeriCartellone[90];
-    bool NumeriGenerati[90];
 }
 
 using namespace Variabili;
+
+
+struct Cartella {
+    unsigned int Numeri {};
+    bool Marcato = false;
+};
+
+const unsigned int Righe = 9,  Colonne = 10;
+
+const unsigned int RigheSingolaCartella = 3, ColonneSingolaCartella = 5;
+Cartella CartellaSingola[ColonneSingolaCartella][RigheSingolaCartella];
+
+const unsigned int RigheDoppiaCartella = 6, ColonneDoppiaCartella = 10;
+Cartella CartellaDoppia[ColonneDoppiaCartella][RigheDoppiaCartella];
+
+const unsigned int RigheTriplaCartella = 9, ColonneTriplaCartella = 15;
+Cartella CartellaTripla[ColonneTriplaCartella][RigheTriplaCartella];
+
+int Numeri[ColonneSingolaCartella*RigheSingolaCartella];
+bool NumeriCartellone[90];
+bool NumeriGenerati[90];
 
 void LineeGuida() {
     do {
@@ -105,7 +98,7 @@ void IstruzioniGioco() {
     cout << "I Numeri Verranno Estratti Dal Bussolotto E Nessuno Dei Partecipanti, Nemmeno Chi Toccherà Estrarre Numeri, Saprà Il Numero Prima Che Uscisse Dal Bussolotto. " << endl;
     cout << "I Giocatori, Dopo Aver Acquistato Le Cartelle, Le Dispongono Davanti A Sé E Oscurano Il Numero Che Verrà Estratto Dal Bussolotto Con L'apposita Casellina. " << endl;
     cout << "Quando Tutte Le Caselline Con I Numeri Vengono Oscurate Il Giocatore Ha Fatto \"Tombola\" E Acquista Il Premio Finale." << endl;
-    cout << " Oltre Alla Tombola È Possibile Anche Decidere Dei Premi Minori Che Si Acquisiscono Facendo Ambo (Due Numeri Sulla Stessa Riga) "
+    cout << " Oltre Alla Tombola È Possibile Anche Decidere Dei Premi Minori Che Si Acquisiscono Facendo ControlloAmbo (Due Numeri Sulla Stessa Riga) "
             "Terno (Tre Numeri Sulla Stessa Riga) Quaterna (Quattro Numeri Sulla Stessa Riga) E Cinquina (Cinque Numeri Sulla Stessa Riga)." << endl;
     cout << "╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝" << endl ;
 }
@@ -140,14 +133,13 @@ void CreaCartella() {
             cout << "Buon Divertimento." << endl;
             cout << "Attendere Prego.." << endl << endl;
         } else if (CostoCartelle > Soldi) {
-            CostoCartelle = CostoCartelle - Soldi;
-            abs(CostoCartelle);
+            CostoCartelle -= Soldi;
         } else {
             Pagato = true;
             Soldi = Soldi - CostoCartelle;
 
             cout << "╔════════════════════════════════════════════╗" << endl;
-            cout << "Il suo Resto: " << CostoCartelle << endl;
+            cout << "Il suo Resto: €" << CostoCartelle << endl;
             cout << "╚════════════════════════════════════════════╝" << endl;
         }
     } while (!Pagato);
@@ -188,8 +180,6 @@ void GiocaSingolaCartella() {
                 Ambo = true;
                 cout << "╔════════════════════════════════════════════╗" << endl;
                 cout << " Complimenti, hai Fatto Ambo! " << endl;
-                cout << "Hai Vinto " << PrezzoCartella/8;
-                sleep(1);
                 cout << "╚════════════════════════════════════════════╝" << endl;
 
                 sleep(1);
@@ -202,8 +192,6 @@ void GiocaSingolaCartella() {
                 Terna = true;
                 cout << "╔════════════════════════════════════════════╗" << endl;
                 cout << " Complimenti, hai Fatto Terna! " << endl;
-                cout << "Hai Vinto " << PrezzoCartella/6;
-                sleep(1);
                 cout << "╚════════════════════════════════════════════╝" << endl;
 
                 sleep(1);
@@ -216,8 +204,6 @@ void GiocaSingolaCartella() {
                 Quaterna = true;
                 cout << "╔════════════════════════════════════════════╗" << endl;
                 cout << " Complimenti, hai Fatto Quaterna! " << endl;
-                cout << "Hai Vinto " << PrezzoCartella / 4;
-                sleep(1);
                 cout << "╚════════════════════════════════════════════╝" << endl;
 
                 sleep(1);
@@ -230,8 +216,6 @@ void GiocaSingolaCartella() {
                 Cinquina = true;
                 cout << "╔════════════════════════════════════════════╗" << endl;
                 cout << " Complimenti, hai Fatto Cinquina! " << endl;
-                cout << "Hai Vinto " << PrezzoCartella / 3;
-                sleep(1);
                 cout << "╚════════════════════════════════════════════╝" << endl;
             }
         }
@@ -242,8 +226,6 @@ void GiocaSingolaCartella() {
                 Tombola = true;
                 cout << "╔════════════════════════════════════════════╗" << endl;
                 cout << " Complimenti, hai Vinto! " << endl ;
-                cout << "Hai Vinto " << PrezzoCartella / 2;
-                sleep(1);
                 cout << "╚════════════════════════════════════════════╝" << endl;
 
             }
@@ -289,7 +271,7 @@ bool ControlloNumeriDoppi(int Numero) {
 }
 
 bool ControlloNumeroUscito(int Numero) {
-    if (NumeriCartellone[Numero] == false) {
+    if (!NumeriCartellone[Numero]) {
         NumeriCartellone[Numero] = true;
         return true;
     } else {
