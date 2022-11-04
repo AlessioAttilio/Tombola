@@ -107,6 +107,6 @@ In Questa Funzione, Andiamo ad **Esaminare** Tutti gli Elementi della **Matrice 
 File Distribuito Tramite GitHub, Usando una Licenza GNU [GPL](https://github.com/AlessioAttilio/Tombola/blob/main/LICENSE)  
   
 ---  
-(Distribuito da **[ALESSIO ATTILIO](alessio-attilio.info)** - [Accesso alla Directory](https://github.com/AlessioAttilio/Tombola))  
+(Distribuito da **[ALESSIO ATTILIO](https://alessio-attilio.info/)** - [Accesso alla Directory](https://github.com/AlessioAttilio/Tombola))  
   
 ---
